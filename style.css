@@ -1,10 +1,9 @@
 *,
 *::after,
-*::before{
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border-radius: 0.5rem;
 }
 
 :root {
@@ -15,90 +14,58 @@
 }
 
 html {
-    font-size:  62.5%;
+    font-size: 62.5%;
 }
 
 body {
     font-size: 1.6rem;
-    
-}
-
-.container{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--background-light);
 }
 
-.main{
-    border: 0.3rem solid var(--primary-dark);
-    width: 25vw;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-light);
-}
-
-.screen,
-.buttons {
-    border: 0.2rem solid var(--primary-dark);
-}
-
-.screen{
-    flex: 1;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
+.calculator-grid {
+    display: grid;
     justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.screen-white{
-    background-color: var(--secondary-light);
-    width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 3rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: var(--primary-light);
+    /* background-color: rgba(255, 255, 255, .75); */
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.screen-white > h1{
-    font-size: 6rem;
-}
-
-.buttons{
-    flex: 4;
-    margin: 0 1rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.sections{
-    flex: 1;
-    display: flex;
+    align-items: flex-end;
     justify-content: space-around;
-    align-items: stretch;
-    gap: 1rem;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-button{
-    flex: 1;
-}
-
-h3{
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
     font-size: 2.5rem;
 }
 
-#AC{
-    flex: 2.15;
-}
-
-button:active{
-    background-color: var(--primary-dark);
-    color: var(--secondary-light);
+.output .current-operand {
+    color: white;
+    font-size: 3.5rem;
 }

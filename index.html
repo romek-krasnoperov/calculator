@@ -11,45 +11,30 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="main">
-            <div class="screen">
-                <div class="screen-white"><h1>0.00</h1></div>
-            </div>
-            <div class="buttons">
-                <div class="sections" id="one">
-                    <button id="AC"><h3>AC</h3></button>
-                    <button id="+/-"><h3>+/-</h3></button>
-                    <button id="%"><h3>%</h3></button>
-                </div>
-                <div class="sections" id="two">
-                    <button id="7"><h3>7</h3></button>
-                    <button id="8"><h3>8</h3></button>
-                    <button id="9"><h3>9</h3></button>
-                    <button id="10"><h3>/</h3></button>
-                </div>
-                <div class="sections" id="three">
-                    <button id="4"><h3>4</h3></button>
-                    <button id="5"><h3>5</h3></button>
-                    <button id="6"><h3>6</h3></button>
-                    <button id="*"><h3>*</h3></button>
-                </div>
-                <div class="sections" id="four">
-                    <button id="1"><h3>1</h3></button>
-                    <button id="2"><h3>2</h3></button>
-                    <button id="3"><h3>3</h3></button>
-                    <button id="-"><h3>-</h3></button>
-                </div>
-                <div class="sections" id="five">
-                    <button id="0"><h3>0</h3></button>
-                    <button id="."><h3>.</h3></button>
-                    <button id="="><h3>=</h3></button>
-                    <button id="+"><h3>+</h3></button>
-                </div>
-            </div>
-        </div>
+    <div class="calculator-grid">
+      <div class="output">
+        <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
+      <button data-all-clear class="span-two">AC</button>
+      <button data-delete class="span-two">DEL</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>÷</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>*</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>+</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equals>=</button>
+      <button data-operation>-</button>
     </div>
-
-</body>
+  </body>
 
 </html>
